@@ -1,4 +1,4 @@
- var output;
+var output;
 $(function(){
     
     output = document.getElementById('output');
