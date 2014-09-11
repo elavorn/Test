@@ -1,7 +1,7 @@
-var output;
+
 $(function(){
     
-    output = document.getElementById('output');
+   var output = document.getElementById('output');
     var login = document.getElementById('login');
     var logout = document.getElementById('logout');
     var check = document.getElementById('check');
@@ -59,7 +59,7 @@ $(function(){
     
     
 
-});
+
 document.addEventListener('deviceready', function(){
     try {
         
@@ -76,3 +76,4 @@ document.addEventListener('deviceready', function(){
 })
     
 }, false);
+});
