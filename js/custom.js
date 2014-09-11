@@ -1,10 +1,11 @@
-var output;
+ var output;
 $(function(){
     
+    output = document.getElementById('output');
     var login = document.getElementById('login');
     var logout = document.getElementById('logout');
     var check = document.getElementById('check');
-    <!-- These are the notifications that are displayed to the user through pop-ups if the above JS files does not exist in the same directory-->
+   
             if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
             if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
             if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
@@ -61,10 +62,9 @@ $(function(){
 });
 document.addEventListener('deviceready', function(){
     try {
-        output = document.getElementById('output');
+        
                                       output.innerHTML ='Device is ready! Make sure you have set your app_id.';
                                       FB.init({ appId: "582945355165168", nativeInterface: CDV.FB, useCachedDialogs: false });
-                                      document.getElementById('data').innerHTML = "";
                                       } catch (e) {
                                       output.innerHTML = e;
                                       }
